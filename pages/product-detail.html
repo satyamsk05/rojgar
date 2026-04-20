@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details - ROJGAR</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,44 +12,52 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <a href="index.html" style="text-decoration: none;"><h2>ROJGAR.</h2></a>
+                <a href="../index.html" style="text-decoration: none;"><h2>ROJGAR.</h2></a>
             </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#products">Products</a></li>
+                <li><a href="../index.html#categories">Categories</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="contact.html">Support</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" style="display: none; background: none; border: none; font-size: 24px; cursor: pointer;">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
-    <section class="section">
+    <section class="section" style="padding: 60px 0;">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+            <div class="about-grid">
                 
                 <div class="reveal-init">
-                    <div style="background: var(--gray); aspect-ratio: 1; border: 2px solid var(--border-color); border-radius: 24px; overflow: hidden; margin-bottom: 20px;">
-                        <img id="mainImg" src="" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="background: var(--white); border: 2px solid var(--border-color); box-shadow: 15px 15px 0px 0px #000; overflow: hidden; margin-bottom: 20px;">
+                        <img id="mainImg" src="" alt="" style="width: 100%; height: auto; display: block;">
                     </div>
                 </div>
 
                 <div class="reveal-init">
-                    <span id="pTag" style="color: var(--secondary-color); font-weight: 800; text-transform: uppercase; font-size: 14px; letter-spacing: 2px;"></span>
-                    <h1 id="pName" style="font-size: 48px; margin: 15px 0; font-weight: 900; text-transform: uppercase;"></h1>
-                    <p id="pDesc" style="font-size: 18px; color: var(--dark); margin-bottom: 30px; font-weight: 500;"></p>
+                    <div style="background: var(--highlight-color); border: 2px solid var(--border-color); padding: 5px 15px; display: inline-block; font-weight: 900; font-size: 13px; margin-bottom: 15px; box-shadow: 4px 4px 0px 0px #000; text-transform: uppercase;" id="pTag"></div>
+                    <h1 id="pName" style="font-size: clamp(36px, 6vw, 60px); margin: 10px 0 20px; font-weight: 900; text-transform: uppercase; line-height: 1; letter-spacing: -2px;"></h1>
+                    <p id="pDesc" style="font-size: 18px; color: var(--dark); margin-bottom: 40px; font-weight: 500; opacity: 0.8;"></p>
                     
-                    <div style="background: var(--white); padding: 35px; border: 2px solid var(--border-color); box-shadow: var(--shadow-md); margin-bottom: 30px;">
+                    <div style="background: var(--white); padding: 40px; border: 2px solid var(--border-color); box-shadow: 10px 10px 0px 0px #000; margin-bottom: 40px;">
                         <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                            <span id="pPrice" style="font-size: 40px; font-weight: 900;"></span>
-                            <span id="pMRP" style="text-decoration: line-through; opacity: 0.5; font-size: 20px;"></span>
-                            <span style="background: var(--accent-color); border: 2px solid var(--border-color); padding: 4px 12px; font-size: 14px; font-weight: 900;">SAVE 60%</span>
+                            <span id="pPrice" style="font-size: 48px; font-weight: 900;"></span>
+                            <span id="pMRP" style="text-decoration: line-through; opacity: 0.5; font-size: 24px; font-weight: 700;"></span>
+                            <span style="background: var(--accent-color); color: white; border: 2px solid var(--border-color); padding: 4px 15px; font-size: 14px; font-weight: 900;">60% OFF</span>
                         </div>
-                        <p style="color: var(--secondary-color); font-weight: 800; font-size: 14px; text-transform: uppercase;">Offer ends soon</p>
-                        <br>
-                        <a id="buyBtn" href="#" class="btn btn-primary btn-block">Buy Now & Instant Access</a>
+                        <p style="color: var(--secondary-color); font-weight: 900; font-size: 14px; text-transform: uppercase; margin-bottom: 30px;">⚡ FLASH DEAL - ENDS IN 02:45</p>
+                        <a id="buyBtn" href="checkout.html" class="btn btn-primary btn-block" style="padding: 20px; font-size: 18px;">UNLOCK ACCESS NOW</a>
                     </div>
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; text-transform: uppercase;">
-                            <i class="fas fa-check-circle" style="color: var(--secondary-color);"></i>
+                        <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 900; text-transform: uppercase;">
+                            <i class="fas fa-bolt" style="color: var(--highlight-color); text-shadow: 1px 1px 0px #000;"></i>
                             <span>Instant Download</span>
                         </div>
-                        <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; text-transform: uppercase;">
-                            <i class="fas fa-check-circle" style="color: var(--secondary-color);"></i>
+                        <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 900; text-transform: uppercase;">
+                            <i class="fas fa-infinity" style="color: var(--accent-color);"></i>
                             <span>Lifetime Access</span>
                         </div>
                     </div>
@@ -61,21 +68,31 @@
     </section>
 
     <footer class="footer">
-        <div class="container" style="text-align: center;">
-            <p>&copy; 2024 ROJGAR. ALL RIGHTS RESERVED.</p>
+        <div class="container">
+            <h2 style="font-size: clamp(40px, 10vw, 100px); letter-spacing: -2px;">ROJGAR.</h2>
+            <div class="footer-grid">
+                <div>
+                    <h4 style="margin-bottom: 20px;">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#about">About Us</a></li>
+                        <li><a href="contact.html">Contact Hub</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p style="font-weight: 700; font-size: 12px;">&copy; 2024 ROJGAR. BOLD DIGITAL SOLUTIONS.</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
         const products = {
-            'reels-kit': { tag: 'Creator Tools', name: 'Instagram Reels Mastery Kit', price: '₹199', mrp: '₹499', desc: '500+ Viral Hooks, Captions & Ideas to grow your account 10x.', img: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800' },
-            'canva-templates': { tag: 'Design', name: 'Canva Templates Bundle', price: '₹349', mrp: '₹699', desc: '120+ Fully editable social media templates for every niche.', img: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800' },
-            'resume-pack': { tag: 'Job/Career', name: 'Resume + Cover Letter Pack', price: '₹149', mrp: '₹399', desc: '15+ ATS-Optimized templates to land your dream job interviews.', img: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800' },
-            'notion-planner': { tag: 'Productivity', name: 'Notion Second Brain', price: '₹399', mrp: '₹799', desc: 'Complete system to organize your life, tasks & projects in one place.', img: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=800' },
-            'complete-bundle': { tag: 'All-In-One', name: 'Complete Creator Bundle', price: '₹999', mrp: '₹2499', desc: 'Get access to all 8 premium products.', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800' }
+            'reels-kit': { tag: 'Creator Tools', name: 'Instagram Reels Kit', price: '₹199', mrp: '₹499', desc: '500+ Viral Hooks, Captions & High-Impact Ideas to explode your reach. The ultimate toolbox for modern creators.', img: '../images/products/reels-kit.png' },
+            'canva-templates': { tag: 'Design System', name: 'Canva Bundle', price: '₹349', mrp: '₹699', desc: '120+ Fully editable social media templates for every niche. Stop designing from scratch and start shipping.', img: '../images/products/canva-templates.png' },
+            'resume-pack': { tag: 'Career', name: 'ATS Resume Pack', price: '₹149', mrp: '₹399', desc: '15+ Modern, ATS-Optimized templates designed to get you noticed by top-tier tech recruiters globally.', img: '../images/products/ebook.png' },
+            'notion-planner': { tag: 'Productivity', name: 'Notion Second Brain', price: '₹399', mrp: '₹799', desc: 'The only system you need to organize your life, tasks & projects. Built for maximum psychological flow.', img: '../images/products/ebook.png' }
         };
         const currentProduct = products[productId] || products['reels-kit'];
         document.getElementById('pTag').textContent = currentProduct.tag;
