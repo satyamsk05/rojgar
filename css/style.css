@@ -67,12 +67,18 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo h2 {
-    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 32px;
-    font-weight: 400; /* Archivo Black only has 400 but looks ultra bold */
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -2px;
+    color: var(--dark);
 }
 
 .nav-menu {
@@ -83,8 +89,8 @@ h1, h2, h3, h4 {
 .nav-menu a {
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'Archivo Black', sans-serif;
-    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
     font-size: 13px;
     letter-spacing: 0.5px;
     color: var(--dark);
