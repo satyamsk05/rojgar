@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ROJGAR</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;"><h2>ROJGAR.</h2></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Section -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1.2fr; gap: 40px;">
+                
+                <!-- Checkout Form -->
+                <div style="background: white; padding: 40px; border-radius: 24px; border: 1px solid var(--border-color);">
+                    <h2 style="margin-bottom: 30px;">Billing Details</h2>
+                    
+                    <form id="checkoutForm">
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Full Name *</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Email Address *</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="10-digit number" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <label style="display: flex; align-items: center; gap: 10px; font-size: 14px;">
+                                <input type="checkbox" required>
+                                I agree to the <a href="terms.html">Terms & Conditions</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" style="padding: 16px;">
+                            Proceed to Secure Payment
+                        </button>
+                    </form>
+
+                    <div style="margin-top: 30px; text-align: center; opacity: 0.6;">
+                        <p style="font-size: 12px;">256-bit Encrypted Secure Checkout</p>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div style="background: var(--gray); padding: 40px; border-radius: 24px; border: 2px solid var(--border-color);">
+                    <h3 style="margin-bottom: 20px; text-transform: uppercase; font-weight: 900;">Order Summary</h3>
+                    <div id="orderItems" style="margin-bottom: 30px;">
+                        <!-- Items will be loaded here via JS -->
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                            <div style="width: 60px; height: 60px; background: #cbd5e1; border-radius: 8px;"></div>
+                            <div>
+                                <h4 id="prodName">Loading Product...</h4>
+                                <p id="prodPrice">₹0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="border-top: 1px solid #cbd5e1; padding-top: 20px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">₹0</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 20px; font-weight: 800; font-size: 20px;">
+                            <span>Total:</span>
+                            <span id="total" style="color: var(--primary-color);">₹0</span>
+                        </div>
+                    </div>
+
+                    <div style="background: white; padding: 20px; border-radius: 12px; margin-top: 30px; font-size: 14px;">
+                        <p>✅ Instant Download</p>
+                        <p>✅ Lifetime Access</p>
+                        <p>✅ Free Updates</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Razorpay Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        // Simple logic to fetch product from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        
+        const products = {
+            'reels-kit': { name: 'Instagram Reels Mastery Kit', price: 199 },
+            'canva-templates': { name: 'Canva Templates Bundle', price: 349 },
+            'resume-pack': { name: 'Resume + Cover Letter Pack', price: 149 },
+            'notion-planner': { name: 'Notion Second Brain', price: 399 },
+            'complete-bundle': { name: 'Complete Creator Bundle', price: 999 }
+        };
+
+        const currentProduct = products[productId] || products['reels-kit'];
+        
+        document.getElementById('prodName').textContent = currentProduct.name;
+        document.getElementById('prodPrice').textContent = '₹' + currentProduct.price;
+        document.getElementById('subtotal').textContent = '₹' + currentProduct.price;
+        document.getElementById('total').textContent = '₹' + currentProduct.price;
+
+        document.getElementById('checkoutForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Razorpay logic here
+            alert('Proceeding to Razorpay for ₹' + currentProduct.price);
+        });
+    </script>
+</body>
+</html>
