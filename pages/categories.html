@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - ROJGAR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none;"><h2>ROJGAR.</h2></a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#products">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="contact.html">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section" style="background: var(--gray); border-bottom: 2px solid var(--border-color); padding: 80px 0;">
+        <div class="container">
+            <h1 style="font-size: 64px; text-align: center; margin-bottom: 40px;">Browse by <span style="color: var(--secondary-color);">Category.</span></h1>
+            
+            <div class="categories-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="category-card reveal-init" onclick="window.location.href='../index.html#products'">
+                    <i class="fas fa-video category-icon"></i>
+                    <h4>Creator Tools</h4>
+                    <p>Viral kits & templates for Instagram, YouTube & more.</p>
+                </div>
+                <div class="category-card reveal-init" onclick="window.location.href='../index.html#products'">
+                    <i class="fas fa-file-alt category-icon"></i>
+                    <h4>Job/Resume</h4>
+                    <p>ATS-friendly resume packs and interview guides.</p>
+                </div>
+                <div class="category-card reveal-init" onclick="window.location.href='../index.html#products'">
+                    <i class="fas fa-graduation-cap category-icon"></i>
+                    <h4>Student/Exam</h4>
+                    <p>Handwritten notes and study templates for success.</p>
+                </div>
+                <div class="category-card reveal-init" onclick="window.location.href='../index.html#products'">
+                    <i class="fas fa-briefcase category-icon"></i>
+                    <h4>Freelancer</h4>
+                    <p>Contract templates and proposal kits for business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h2 style="font-size: clamp(40px, 10vw, 100px); letter-spacing: -2px;">ROJGAR.</h2>
+            <p style="font-weight: 700; font-size: 12px; margin-top: 30px;">&copy; 2025 ROJGAR. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

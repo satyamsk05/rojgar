@@ -19,7 +19,7 @@
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#products">Products</a></li>
-                <li><a href="#categories">Categories</a></li>
+                <li><a href="pages/categories.html">Categories</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="pages/contact.html">Support</a></li>
             </ul>
@@ -27,7 +27,6 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="nav-btns">
-                <a href="login.html" class="btn btn-outline" style="padding: 10px 20px; font-size: 14px;">Login</a>
                 <a href="#products" class="btn btn-primary" style="padding: 10px 20px; font-size: 14px;">Start Earning</a>
             </div>
         </div>
@@ -37,7 +36,7 @@
     <!-- Optimized Top Experience -->
     <section class="section" style="background: var(--gray); border-bottom: 2px solid var(--border-color); overflow: hidden; padding: 50px 0 60px;">
         <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap;">
                 
                 <div class="reveal-init" style="flex: 1; min-width: 300px;">
                     <div style="background: var(--highlight-color); border: 2px solid var(--border-color); padding: 5px 15px; display: inline-block; font-weight: 900; font-size: 13px; margin-bottom: 20px; box-shadow: 4px 4px 0px 0px #000; text-transform: uppercase;">ROJGAR MARKETPLACE</div>
@@ -51,12 +50,16 @@
                     </h2>
                 </div>
 
-                <div class="reveal-init experience-box">
-                    <div style="background: var(--white); border: 2px solid var(--border-color); padding: 15px; box-shadow: 10px 10px 0px 0px #000; text-align: center;">
-                        <img src="images/afterimage.png" alt="Negative Afterimage" style="width: 100%; height: auto; border: 2px solid var(--border-color); display: block; margin-bottom: 15px;">
-                        <p style="font-weight: 900; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; line-height: 1.2;">
-                            STARE AT (*) FOR 30S, <br> THEN LOOK AT A WHITE WALL.
-                        </p>
+                <div class="reveal-init" style="flex: 1; min-width: 300px;">
+                    <div style="background: var(--white); border: 2px solid var(--border-color); padding: 30px; box-shadow: 10px 10px 0px 0px var(--secondary-color); position: relative;">
+                        <span style="position: absolute; top: -15px; right: -15px; background: var(--accent-color); color: white; padding: 5px 15px; font-weight: 900; border: 2px solid #000; transform: rotate(5deg);">MEGA DEAL</span>
+                        <h3 style="font-size: 32px; margin-bottom: 10px;">The Everything Bundle</h3>
+                        <p style="font-weight: 600; margin-bottom: 20px;">Get all 8+ premium kits, templates & guides in one go.</p>
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+                            <span style="font-size: 48px; font-weight: 900;">₹999</span>
+                            <span style="text-decoration: line-through; opacity: 0.5; font-size: 20px;">₹2,499</span>
+                        </div>
+                        <a href="pages/product-detail.html?id=complete-bundle" class="btn btn-primary btn-block">Grab the Bundle</a>
                     </div>
                 </div>
 
@@ -67,26 +70,16 @@
     <!-- Categories Section -->
     <section class="section" id="categories" style="background: var(--white); padding: 40px 0;">
         <div class="container">
-            <div class="categories-grid">
-                <div class="category-card reveal-init">
-                    <i class="fas fa-video category-icon"></i>
-                    <h4>Creator Tools</h4>
-                    <p>Viral kits & templates</p>
+            <div class="categories-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="category-card reveal-init" style="background: var(--highlight-color); border: 4px solid #000; box-shadow: 10px 10px 0px 0px #000;">
+                    <i class="fas fa-video category-icon" style="font-size: 50px;"></i>
+                    <h4 style="font-size: 24px;">Reels & Creator Kits</h4>
+                    <p style="font-weight: 700;">Viral Hooks, Captions & Ideas for Instagram Growth.</p>
                 </div>
-                <div class="category-card reveal-init">
-                    <i class="fas fa-graduation-cap category-icon"></i>
-                    <h4>Student/Exam</h4>
-                    <p>Complete notes & guides</p>
-                </div>
-                <div class="category-card reveal-init">
-                    <i class="fas fa-file-alt category-icon"></i>
-                    <h4>Job/Resume</h4>
-                    <p>ATS-friendly packs</p>
-                </div>
-                <div class="category-card reveal-init">
-                    <i class="fas fa-briefcase category-icon"></i>
-                    <h4>Freelancer</h4>
-                    <p>Contracts & proposals</p>
+                <div class="category-card reveal-init" style="background: var(--secondary-color); color: #fff; border: 4px solid #000; box-shadow: 10px 10px 0px 0px #000;">
+                    <i class="fas fa-file-alt category-icon" style="font-size: 50px; color: #fff;"></i>
+                    <h4 style="font-size: 24px;">Resume & Job Kits</h4>
+                    <p style="font-weight: 700;">ATS-Friendly Packs & Interview Guides for Freshers.</p>
                 </div>
             </div>
         </div>
@@ -97,8 +90,8 @@
         <div class="container">
             <div class="section-header">
                 <div>
-                    <h2>Popular Kits</h2>
-                    <p>Start with our best-selling digital products.</p>
+                    <h2>Hustle Essentials</h2>
+                    <p>Tested by creators, designed for results. Pick your toolkit and start earning.</p>
                 </div>
             </div>
 
@@ -181,26 +174,30 @@
         <div class="container">
             <div class="about-grid">
                 <div class="reveal-init">
-                    <h2 style="font-size: 56px; margin-bottom: 30px;">Fueling the Digital <span style="color: var(--secondary-color)">Revolution.</span></h2>
-                    <p style="font-size: 18px; font-weight: 500; margin-bottom: 25px;">Welcome to ROJGAR, your ultimate destination for high-impact digital products designed to accelerate your growth in the digital economy. Founded on the principle of accessibility and empowerment, we believe that everyone should have the tools they need to succeed online, whether you're an aspiring creator, a student looking for an edge, or a professional aiming for their next career breakthrough.</p>
+                    <h2 style="font-size: 56px; margin-bottom: 30px;">Digital Hustle <span style="color: var(--secondary-color)">Made Easy.</span></h2>
+                    <p style="font-size: 24px; font-weight: 700; line-height: 1.4; color: var(--dark);">ROJGAR makes your digital hustle easy. We sell ready-to-use templates, kits & guides — tested by real creators. Download karo, use karo, earn karo.</p>
                 </div>
-                <div class="reveal-init" style="font-weight: 500; line-height: 1.8; color: var(--dark); opacity: 0.8;">
-                    <p style="margin-bottom: 20px;">At ROJGAR, we don't just sell templates; we provide systems. Every product in our marketplace is meticulously crafted by experts who understand the nuances of the modern digital landscape. Our Instagram Reels kits are based on viral algorithms, our resume packs are tested against top-tier ATS systems, and our Notion planners are designed for maximum psychological flow. We understand that in today's fast-paced world, speed is just as important as quality. That's why our "kits" are ready-to-use from the moment you download them.</p>
-                    <p style="margin-bottom: 20px;">Our mission is simple: to bridge the gap between ambition and achievement. We noticed that many people have incredible ideas but get bogged down by the technical execution—be it designing a perfect post, structuring a professional resume, or organizing a complex project. ROJGAR removes those barriers, giving you professional-grade resources at a fraction of the cost of hiring an agency or spending hundreds of hours on DIY learning. We are more than just a store; we are a partner in your digital journey, committed to providing lifetime updates and constant support to our community of over 5,000+ satisfied users.</p>
-                    <p>When you choose ROJGAR, you're not just buying a file. You're buying time, confidence, and a proven path to success. Join the revolution today and see why top creators and professionals trust ROJGAR to power their digital presence.</p>
+                <div class="reveal-init" style="font-weight: 600; line-height: 1.8; color: var(--dark); opacity: 0.9;">
+                    <p style="margin-bottom: 20px;">We are more than just a store; we are a partner in your digital journey, committed to providing lifetime updates and constant support to our community of <span style="background: var(--highlight-color); padding: 0 5px;">Trusted by 200+ creators</span>.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Bundle Section -->
-    <section class="section" style="background: var(--accent-color); border-top: 2px solid var(--border-color); border-bottom: 2px solid var(--border-color);">
+    <!-- Lead Magnet Section -->
+    <section class="section" style="background: var(--gray); border-top: 2px solid var(--border-color); border-bottom: 2px solid var(--border-color);">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <span style="font-weight: 900; text-transform: uppercase; letter-spacing: 2px;">Mega Offer</span>
-                <h2 style="font-size: clamp(40px, 6vw, 64px); margin: 20px 0; text-transform: uppercase; font-weight: 900;">Get Everything for ₹999</h2>
-                <p style="margin-bottom: 30px; font-weight: 500;">Access all 8 premium products + future updates + private community access. Save more than ₹1400 today.</p>
-                <a href="product-detail.html?id=complete-bundle" class="btn btn-primary" style="padding: 20px 40px; font-size: 18px;">Get Full Bundle Access</a>
+            <div style="background: var(--white); border: 4px solid #000; padding: 40px; box-shadow: 15px 15px 0px 0px #000; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 48px; margin-bottom: 10px;">Free Creator Toolkit</h2>
+                    <p style="font-weight: 600;">Get our "Viral Hooks & Captions" guide for free. Just drop your email.</p>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <form style="display: flex; gap: 10px;">
+                        <input type="email" placeholder="Your Email Address" style="flex: 1; padding: 15px; border: 2px solid #000; font-family: inherit; font-weight: 700; outline: none;" required>
+                        <button type="submit" class="btn btn-primary" style="padding: 15px 30px;">Get it Free</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -217,8 +214,8 @@
                     <h4 style="margin-bottom: 20px; text-transform: uppercase; font-weight: 900;">Links</h4>
                     <ul class="footer-links">
                         <li><a href="#products">All Products</a></li>
-                        <li><a href="#categories">Categories</a></li>
-                        <li><a href="#">Free Samples</a></li>
+                        <li><a href="pages/categories.html">Categories</a></li>
+                        <li><a href="pages/free-samples.html">Free Samples</a></li>
                     </ul>
                 </div>
                 <div>
@@ -231,7 +228,7 @@
                 </div>
             </div>
             <div style="border-top: 2px solid var(--border-color); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 14px; text-transform: uppercase;">
-                <p>&copy; 2024 ROJGAR. ALL RIGHTS RESERVED.</p>
+                <p>&copy; 2025 ROJGAR. ALL RIGHTS RESERVED.</p>
                 <div style="display: flex; gap: 20px;">
                     <a href="#" style="color: inherit;"><i class="fab fa-instagram"></i></a>
                     <a href="#" style="color: inherit;"><i class="fab fa-youtube"></i></a>
@@ -240,6 +237,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="js/script.js"></script>
 </body>

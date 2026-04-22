@@ -479,3 +479,42 @@ h1, h2, h3, h4 {
         padding: 0 20px;
     }
 }
+
+/* ===================================
+   WHATSAPP FLOAT
+=================================== */
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: var(--shadow-md);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: var(--transition);
+    border: 2px solid #000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) translate(-5px, -5px);
+    box-shadow: var(--shadow-lg);
+    background-color: #128c7e;
+    color: #FFF;
+}
+
+/* ===================================
+   UTILITIES
+=================================== */
+.btn-block {
+    width: 100%;
+}
